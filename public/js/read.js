@@ -1,3 +1,6 @@
+let db = [];
+let dbSerialize = JSON.stringify(db);
+localStorage.setItem('origin',dbSerialize);
 let tasks = document.getElementById('tasks');
 let dbDesialize = JSON.parse(localStorage.getItem('origin'));
 for(let i = 0; i < dbDesialize.length; i++){
