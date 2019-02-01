@@ -1,5 +1,5 @@
 let db = [];
-if(localStorage == null){
+if(localStorage == null || localStorage.length == 0 || localStorage == undefined){
     let dbSerialize = JSON.stringify(db);
     localStorage.setItem('origin',dbSerialize);
 }
