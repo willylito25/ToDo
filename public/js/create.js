@@ -1,6 +1,8 @@
 let db = [];
-let dbSerialize = JSON.stringify(db);
-localStorage.setItem('origin',dbSerialize);
+if(localStorage == null){
+    let dbSerialize = JSON.stringify(db);
+    localStorage.setItem('origin',dbSerialize);
+}
 let add = document.getElementById('addTask');
 let dbDesialize2 = JSON.parse(localStorage.getItem('origin'));
 add.onclick = function(){
