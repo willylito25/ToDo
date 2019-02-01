@@ -24,3 +24,7 @@ function edit(id){
 function deleteTask(id){
     window.location.href = 'delete.html?id=' + id;
 }
+
+let buttonCreate = document.getElementById('createTask').onclick = function(){
+    window.location.href ='create.html'
+}
