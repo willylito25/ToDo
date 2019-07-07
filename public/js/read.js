@@ -1,20 +1,9 @@
-if(localStorage.length <= 2)
-{
-  localStorage.clear()
-
-  let dbo = [];
-  let dbSerialize1 = JSON.stringify(dbo);
-  localStorage.setItem('prueba1',dbSerialize1);
-
-  let dbu = [];
-  let dbSerialize2 = JSON.stringify(dbu);
-  localStorage.setItem('prueba2',dbSerialize2);
-
-}
-
+if(localStorage == null || localStorage.length == 0 || localStorage == undefined || localStorage.length > 1){
     let db = [];
     let dbSerialize = JSON.stringify(db);
     localStorage.setItem('origin',dbSerialize);
+}
+
 
 let tasks = document.getElementById('tasks');
 let dbDesialize = JSON.parse(localStorage.getItem('origin'));
