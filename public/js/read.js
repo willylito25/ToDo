@@ -1,4 +1,4 @@
-if(localStorage == null || localStorage.length == 0 || localStorage == undefined || localStorage.length > 1){
+if(localStorage == null || localStorage.length >= 0 || localStorage == undefined){
     let db = [];
     let dbSerialize = JSON.stringify(db);
     localStorage.setItem('origin',dbSerialize);
