@@ -1,7 +1,14 @@
 if(localStorage == null || localStorage.length >= 0 || localStorage == undefined){
+  let dbDesialize = JSON.parse(localStorage.getItem('origin'));
+  if(dbDesialize.length > 0){
+      console.log("Existe localStorage origin")
+  }
+  else{
     let db = [];
     let dbSerialize = JSON.stringify(db);
     localStorage.setItem('origin',dbSerialize);
+  }
+    
 }
 
 
