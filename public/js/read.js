@@ -3,6 +3,17 @@ if(localStorage == null || localStorage.length == 0 || localStorage == undefined
     let dbSerialize = JSON.stringify(db);
     localStorage.setItem('origin',dbSerialize);
 }
+
+if(localStorage.length < 1)
+{
+  localStorage.clear()
+}
+
+// if(localStorage.length > 0){
+//   let keys = localStorage.key(localStorage.length);
+//   console.log(keys)
+// }
+
 let tasks = document.getElementById('tasks');
 let dbDesialize = JSON.parse(localStorage.getItem('origin'));
 for(let i = 0; i < dbDesialize.length; i++){
